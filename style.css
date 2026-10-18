@@ -1,0 +1,46 @@
+/* Reset và thiết lập body */
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Định dạng cơ bản cho các khu vực để dễ nhìn */
+.header, .main, .sidebar, .footer {
+  background-color: #f0f8ff;
+  border: 1px solid #a2c1d8;
+  padding: 20px;
+  text-align: center;
+}
+
+/* --- Bố cục GRID --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  grid-column: 1 / 3;
+}
+
+.main {
+  grid-column: 1 / 2;
+  text-align: left;
+}
+
+.sidebar {
+  grid-column: 2 / 3;
+  text-align: left;
+}
+
+.footer {
+  grid-column: 1 / 3;
+}
